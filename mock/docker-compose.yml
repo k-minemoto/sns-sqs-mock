@@ -1,0 +1,18 @@
+version: '3'
+services:
+  # https://github.com/s12v/sns
+  sns:
+    image: s12v/sns
+    container_name: mock_sns
+    volumes:
+      - ./config/db.json:/etc/sns/db.json
+    ports:
+      - '9911:9911'
+      - '9324:9324'
+  # https://github.com/adamw/elasticmq
+  sqs:
+    image: softwaremill/elasticmq
+    container_name: mock_sqs
+    volumes:
+      - ./config/elasticmq.conf:/opt/elasticmq.conf
+    network_mode: service:sns

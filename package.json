@@ -1,0 +1,19 @@
+{
+  "name": "sns-sqs-mock",
+  "version": "1.0.0",
+  "description": "sns-sqs mock",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "bounce": "node ses-bounce.js"
+  },
+  "author": "k-minemoto",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.319.0",
+    "commander": "^2.18.0",
+    "config": "^2.0.1",
+    "eslint": "^5.6.0",
+    "uuid": "^3.3.2"
+  }
+}
